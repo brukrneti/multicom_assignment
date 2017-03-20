@@ -1,0 +1,13 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div>
+        <input type="button" id="getCsvDataBtn" data-request-url="@Url.Action("ReadCsvFileAction", "ReadCsvFile")" value="Show details" class="btn btn-default" />
+        <input type="button" id="storeCsvDataBtn" data-request-url="@Url.Action("StoreCsvDataAction", "ReadCsvFile")" value="Store details" class="btn btn-default" />
+        <br />
+        <br />
+        <div id="csvDataDiv" style="display: none">
+        </div>
+    </div>
