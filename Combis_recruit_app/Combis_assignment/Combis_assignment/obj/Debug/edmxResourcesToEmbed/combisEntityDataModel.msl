@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="combisDBModelStoreContainer" CdmEntityContainer="combisDBEntities">
+    <EntitySetMapping Name="Podaci">
+      <EntityTypeMapping TypeName="combisDBModel.Podaci">
+        <MappingFragment StoreEntitySet="Podaci">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ime" ColumnName="ime" />
+          <ScalarProperty Name="prezime" ColumnName="prezime" />
+          <ScalarProperty Name="postanski_broj" ColumnName="postanski_broj" />
+          <ScalarProperty Name="grad" ColumnName="grad" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

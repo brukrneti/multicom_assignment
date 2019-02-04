@@ -1,0 +1,78 @@
+Zadatak:
+* Zadatak je izmišljen i svaka sluèajnost sa stvarnim osobama, projektima i aplikacijama je nenamjerna :)
+ 
+Specification from customer:
+We need a simple web app, that will help our agents do their work more efficiently.
+App needs to allow us to store new product that we receive from our vendors. New products list will come to us in xml format. Example structure is below. Our agents need to be able to upload xml document, and app should store products listed under "new_products" into our local database.
+Also, app needs to show details on an offer sent out to customer, by fetching data from our main application. Offer code is a unique code (ID) which is sent along with offer to our customers. Generating and sending offers is part of our main app, and access to that is restricted to our sales people. When customer calls back, our agents need to be able to fetch details of the offer, so they would know how to talk to the customer.
+In summary, we need agents to login, and to be able to perform following actions:
+1. get details of the offer by entering unique offer code
+2. upload product xml document, and store details in database
+3. see a list of products already in db (just a name of the product in the list, no other details required)
+ 
+Here is the structure of xml document agents will be uploading to store new products:
+<?xml version="1.0" encoding="UTF-8"?>
+<products_update>
+    <company>Our Company Name</company>
+    <date>2016-01-12</date>
+    <new_products>
+        <product>
+            <code>jsk2ssad21221aasd2cas21ds12das21</code>
+            <name>Product nam e</name>
+            <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque tellus a nibh pretium, ac scelerisque dui imperdiet.</description>
+            <price>4523.12</price>
+        </product>
+        <product>
+            <code>qr3oonrq3rnoonrq3q3rnonor31r31nw</code>
+            <name>Product name 2</name>
+            <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque tellus a nibh pretium, ac scelerisque dui imperdiet.</description>
+            <price>3123.12</price>
+        </product>
+    </new_products>
+</products_update>
+ 
+ 
+Here is the API specification that will return offer when unique code is provided:
+http://voicecode.hr/api/offer
+Request method: GET
+Request parameters:
+- "code" - unique code as offer identifier
+Successfull response:
+- Status Code: 200
+- Example Body Response: JSON
+{
+        "code": "some code here",
+        "customer": "come company name here",
+        "contact_name": "person name ",
+        "products": [
+                {
+                        "name": "product 1",
+                        "price": 12.11,
+                        "discount_percentage": 0.00
+                },
+                {
+                        "name": "product 2",
+                        "price": 302.34,
+                        "discount_percentage": 50.00
+                },
+                {
+                        "name": "product 3",
+                        "price": 456.10,
+                        "discount_percentage": 20.00
+                }
+        ],
+        "total": 528.16,
+        "sentTimestamp": "1451814312"
+}
+ 
+Error Response on invalid code
+- Status Code: 400
+- Body Response: JSON
+{
+        "error": "Some error here....",
+}
+ 
+Here are some codes that will return valid data from the server:
+1. sj3420sjs30sje03j034j23j24dwnsda
+2. r3biejqrafdlnoijr3fe30332qejklrs
+3. rnkj3230d10adf8ujndu02xnd930cu20

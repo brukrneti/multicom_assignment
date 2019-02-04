@@ -1,0 +1,35 @@
+#contactInfo {
+    /*padding-top: 2%;*/
+    font-size: 1.5em;
+    padding: 9px;
+}
+
+.infoGlyphicons {
+    display: inline;
+}
+
+#ownerImg {
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 230px;
+}
+
+i {
+    width: 26px;
+}
+
+.info {
+    padding-left: 2%;
+}
+
+.infoRow {
+    line-height: 40px;
+}
+
+h2 {
+    margin-top: 0px;
+}
+
+.img-responsive {
+    height: inherit;
+}

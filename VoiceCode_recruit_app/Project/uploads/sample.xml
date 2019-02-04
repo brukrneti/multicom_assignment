@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products_update>
+    <company>Our Company Name</company>
+    <date>2016-01-12</date>
+    <new_products>
+        <product>
+            <code>jsk2ssad21221aasd2cas21ds12das21</code>
+            <name>Product nam e</name>
+            <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque tellus a nibh pretium, ac scelerisque dui imperdiet.</description>
+            <price>4523.12</price>
+        </product>
+        <product>
+            <code>qr3oonrq3rnoonrq3q3rnonor31r31nw</code>
+            <name>Product name 2</name>
+            <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque tellus a nibh pretium, ac scelerisque dui imperdiet.</description>
+            <price>3123.12</price>
+        </product>
+    </new_products>
+</products_update>
