@@ -7,6 +7,9 @@
 * Baza: MySQL
 * Application server: GlassFish
 * Java EE Version: Java EE 7 Web
+* Bootstrap
+* JSP
+* Sass
 
 ## Koraci za build i run:
 
